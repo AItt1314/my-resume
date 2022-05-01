@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+input,
+button {
+    outline: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0s,
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.module {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+    align-items: center;
+}
+
+.title {
+    width: 1200px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #337ecc;
+    font-size: 40px;
+    margin: 0 auto;
+}
+
+div {
+    box-sizing: border-box;
+}
