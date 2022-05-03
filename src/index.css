@@ -21,7 +21,7 @@ button {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0s,
+    transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .fade-enter-from,

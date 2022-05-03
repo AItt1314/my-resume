@@ -26,25 +26,26 @@ export default {
             id:2,
             title:'教育',
             isActive:false,
-            scrollY:(this.height-110)
+            scrollY:(this.height)
         },
         {
             id:3,
             title:'技能',
             isActive:false,
-            scrollY:(this.height-110)*2
+            scrollY:(this.height)*2
         },
         {
             id:4,
             title:'作品',
             isActive:false,
-            scrollY:(this.height-110)*3
+            scrollY:(this.height)*3
         }],
     }
     },
     props:['height'],
     computed:{
         myHeight(){
+            //向下或向上滚动的距离为一页的长度-页头高度80-（标题栏的行高-字体大小）
             return this.height-110
         }
     },
@@ -71,7 +72,7 @@ export default {
             window.scrollTo(0,Y)
         }
     },
-    //整页翻动效果
+    //整页翻动效果，先判断是哪一类型的浏览器，再进行上下翻动时移动对应的距离
     mounted () {
         window.addEventListener('scroll',this.tagChange)
         if (document.addEventListener) {
