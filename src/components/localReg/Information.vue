@@ -1,5 +1,5 @@
 <template>
-    <div id='educate'>
+    <div id='educate' :style='{height:height + "px"}'>
         <transition appear name="fade">
             <div v-if="status">
                 <div class="title">教育</div>
@@ -17,14 +17,13 @@
 
 <script>
 export default {
-    props:['status'],
+    props:['status','height'],
 }
 </script>
 
 
 <style scoped>
 #educate{
-    height: 670px;
     background-color: #F5F7FA;
 }
 .my_inf{

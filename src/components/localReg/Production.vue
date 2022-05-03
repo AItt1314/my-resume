@@ -1,5 +1,5 @@
 <template>
-    <div id='production'>
+    <div id='production' :style='{height:height + "px"}'>
         <transition appear name="fade">
             <div v-if="status">
                 <div class="title">作品</div>
@@ -40,14 +40,13 @@ export default {
             ]
         }
     },
-    props:['status'],
+    props:['status','height'],
 }
 </script>
 
 
 <style scoped>
 #production{
-    height: 670px;
     background-color:   #fcd3d3;
 }
 .el-carousel__item {

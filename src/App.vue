@@ -1,10 +1,10 @@
 <template>
 <div >
-  <my-header></my-header>
-  <main-page :status='again[0].status'></main-page>
-  <information :status='again[1].status'></information>
-  <my-skills :status='again[2].status'></my-skills>
-  <production :status='again[3].status'></production>
+  <my-header :height='height'></my-header>
+  <main-page :status='again[0].status' :height='height'></main-page>
+  <information :status='again[1].status' :height='height'></information>
+  <my-skills :status='again[2].status' :height='height'></my-skills>
+  <production :status='again[3].status' :height='height'></production>
 </div>
 </template>
 
@@ -14,7 +14,6 @@ import MainPage from './components/localReg/Main-page.vue';
 import Information from './components/localReg/Information.vue';
 import MySkills from './components/localReg/Myskills.vue';
 import Production from './components/localReg/Production.vue'
-import Footer from './components/localReg/Footer.vue';
 
 
 export default {
@@ -26,16 +25,16 @@ export default {
         {id:2,status:false},
         {id:3,status:false},
         {id:4,status:false}
-      ]
+      ],
+      height: document.documentElement.scrollHeight - 80
     }
   },
   components:{
-    MyHeader,MainPage,Information,MySkills,Production,Footer
+    MyHeader,MainPage,Information,MySkills,Production
   },
   methods:{
     //控制下模块是否渲染，通过页面被卷曲的高度
     anew(){
-      console.log(111);
       this.again.forEach(element => {
         element.status = false;
         if(window.pageYOffset<550) {

@@ -1,5 +1,5 @@
 <template>
-    <div id="main_page">
+    <div id="main_page" :style='{height:height + "px"}'>
         <transition appear name="fade">
             <div class="home_page main module" v-if="status">
                 <div class="page_data">
@@ -26,7 +26,7 @@ export default {
             isOpen:false
         }
     },
-    props:['status'],
+    props:['status','height'],
     components:{
         Contact
     },
@@ -42,7 +42,6 @@ export default {
 <style scoped>
 #main_page{
     margin-top: 80px;
-    height: 670px;
     background-color: #d9ecff;
 }
 h1{

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="header" :span='24'>
+        <div class="header">
             <div class="main">
                 <a href="#" class="namer">王保玉</a>
                 <div class="btn">
@@ -26,36 +26,40 @@ export default {
             id:2,
             title:'教育',
             isActive:false,
-            scrollY:670,
-            
+            scrollY:(this.height-110)
         },
         {
             id:3,
             title:'技能',
             isActive:false,
-            scrollY:1335,
+            scrollY:(this.height-110)*2
         },
         {
             id:4,
             title:'作品',
             isActive:false,
-            scrollY:2000,
+            scrollY:(this.height-110)*3
         }],
-        
     }
+    },
+    props:['height'],
+    computed:{
+        myHeight(){
+            return this.height-110
+        }
     },
     methods:{
         //根据页面被卷去的头部切换标签
         tagChange(){
             this.titleList.forEach(element => element.isActive=false);
-            if(window.pageYOffset<550) {
+            if(window.pageYOffset<this.myHeight) {
             this.titleList[0].isActive=true
             }
-             else if(window.pageYOffset<1650&&window.pageYOffset>=1100)
+             else if(window.pageYOffset<this.myHeight*3&&window.pageYOffset>=this.myHeight*2)
             {
                  this.titleList[2].isActive=true
             }
-            else if(window.pageYOffset<1650&&window.pageYOffset>=550)
+            else if(window.pageYOffset<this.myHeight*2&&window.pageYOffset>=this.myHeight)
             {
                  this.titleList[1].isActive=true
             }
@@ -76,11 +80,11 @@ export default {
              if (e.detail > 0) {
             //当滑轮向上滚动时
   			//  console.log("向上滚动")
-           window.scrollTo(0,window.pageYOffset-590)
+           window.scrollTo(0,window.pageYOffset-this.myHeight)
           }else if (e.detail < 0) {
             //当滑轮向下滚动时
  			// console.log("向下滚动")
-             window.scrollTo(0,window.pageYOffset+590)
+             window.scrollTo(0,window.pageYOffset+this.myHeight)
           }
         }, false);
       }
@@ -90,10 +94,10 @@ export default {
           if (e.wheelDelta > 0) {
             //当滑轮向上滚动时
             // console.log("向上滚动")
-           window.scrollTo(0,window.pageYOffset-555);
+           window.scrollTo(0,window.pageYOffset-this.myHeight);
           }else if(e.wheelDelta < 0){
 			// console.log("向下滚动")
-            window.scrollTo(0,window.pageYOffset+560);
+            window.scrollTo(0,window.pageYOffset+this.myHeight);
             }
       },false)
     }

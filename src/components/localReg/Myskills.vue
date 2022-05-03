@@ -1,5 +1,5 @@
 <template>
-    <div id='my_skills'>
+    <div id='my_skills' :style='{height:height + "px"}'>
         <transition appear name="fade">
             <div v-if="status">
                 <div class="title">技能</div>
@@ -71,13 +71,12 @@ export default {
             ],
         }
     },
-    props:['status'],
+    props:['status','height'],
 }
 </script>
 
 <style scoped>
 #my_skills{
-    height: 670px;
     background-color:  #f8e3c5;
 }
 h3{
