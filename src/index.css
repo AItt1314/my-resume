@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body,
+html {
+    min-width: 1200px;
+}
+
 a {
     text-decoration: none;
     color: #ccc;
@@ -21,7 +26,7 @@ button {
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: all 1.5s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 1.25s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .fade-enter-from,

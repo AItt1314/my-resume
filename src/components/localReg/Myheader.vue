@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="header">
+        <el-row class="header">
             <div class="main">
                 <a href="#" class="namer">王保玉</a>
                 <div class="btn">
                     <a href="#" v-for='item in titleList' :key="item.id" @click.prevent="changeHeight(item.scrollY)" :class="{active:item.isActive}">{{item.title}}</a>
                 </div>
             </div>
-        </div>
+        </el-row>
     </div>
 </template>
 

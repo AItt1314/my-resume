@@ -22,8 +22,8 @@ export default {
             productionList:[
                 {
                     id:1,
-                    src:require('../../assets/img/work.jpg'),
-                    href:'http://www.baidu.com'
+                    src:require('../../assets/img/work-rms.png'),
+                    href:'https://github.com/AItt1314/rms-page'
                 },
                 {
                     id:2,
