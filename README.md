@@ -1,19 +1,7 @@
 # my-resume
 
-## Project setup
-```
-npm install
-```
+欢迎查看我的个人简历，pages服务加载速度较慢，还请海涵
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+在线预览网址：https://aitt1314.github.io/AItt1314-my-resume/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+谢谢
