@@ -27,7 +27,7 @@ export default {
                 },
                 {
                     id:2,
-                    src:require('../../assets/img/work-cdutpage.png'),
+                    src:require('../../assets/img/work-cdutpage.jpg'),
                     href:'https://github.com/AItt1314/my-cdut'
                 },
                 {
