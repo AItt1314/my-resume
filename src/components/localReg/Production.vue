@@ -27,14 +27,14 @@ export default {
                 },
                 {
                     id:2,
-                    src:require('../../assets/img/work.jpg'),
-                    href:'http://www.baidu.com'
+                    src:require('../../assets/img/work-cdutpage.png'),
+                    href:'https://github.com/AItt1314/my-cdut'
                 },
                 {
                     id:3,
                     //解决data中定义图片相对路径页面不显示的问题 require
-                    src:require('../../assets/img/work-cdutpage.png'),
-                    href:'http://my-cdut.vercel.app/'
+                    src:require('../../assets/img/work-pingyougou.png'),
+                    href:'https://github.com/AItt1314/pingyougou_pages'
                     //在vue中的链接地址前需要加上http：//,否者跳转的是本地地址加拼接，http://localhost:8080/http:/www.baidu.com
                 },
             ]
